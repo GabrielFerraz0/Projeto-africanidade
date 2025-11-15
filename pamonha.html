@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cartaz — Pamonha</title>
+
+  <style>
+    /* ===== Layout geral ===== */
+    :root{
+      --max-width: 900px;
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      padding:0;
+      background: #fff;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    body{
+      font-family: "Arial", "Helvetica", sans-serif;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      padding:18mm 12mm; /* espaço para impressora; ajustável */
+      box-sizing:border-box;
+    }
+
+    .sheet {
+      width: calc(210mm - 24mm); /* A4 width minus horizontal paddings */
+      max-width: var(--max-width);
+      background: #fff;
+      color: #111;
+    }
+
+    header{
+      text-align:center;
+      margin-bottom:10px;
+    }
+
+    h1{
+      margin:0;
+      font-size:48px; /* título grande para leitura de longe */
+      line-height:1.03;
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle{
+      margin-top:8px;
+      font-size:20px;
+      font-weight:600;
+      opacity:0.9;
+    }
+
+    main{
+      padding:18px 6px 0 6px;
+    }
+
+    /* Texto principal em tamanho de cartaz */
+    .intro{
+      font-size:22px;      /* ideal para leitura à distância */
+      line-height:1.45;
+      margin-bottom:12px;
+      text-align:justify;
+    }
+
+    .bullets{
+      font-size:20px;
+      line-height:1.45;
+      margin-top:6px;
+      margin-left:18px;
+    }
+
+    .bullets li{
+      margin-bottom:8px;
+    }
+
+    footer{
+      margin-top:16px;
+      font-size:16px;
+      text-align:right;
+      opacity:0.85;
+    }
+
+    /* Evitar quebras ruins na impressão */
+    * {
+      page-break-inside: avoid;
+      break-inside: avoid;
+      -webkit-column-break-inside: avoid;
+    }
+
+    /* Forçar que header + primeiro bloco não sejam separados */
+    header, main, footer {
+      page-break-after: auto;
+      page-break-before: auto;
+    }
+
+    /* Ajustes específicos para impressão */
+    @page {
+      size: A4;
+      margin: 10mm; /* margem física/segurança */
+    }
+
+    @media print {
+      body {
+        padding: 0; /* @page já controla margens */
+      }
+      .sheet {
+        width: auto;
+        box-shadow: none;
+      }
+    }
+
+    /* Pequenos ajustes responsivos na tela */
+    @media (max-width:760px){
+      h1{ font-size:36px; }
+      .intro{ font-size:18px; }
+      .bullets{ font-size:16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="sheet" role="article" aria-labelledby="titulo">
+    <header>
+      <h1 id="titulo">Pamonha</h1>
+      <div class="subtitle">Um sabor tradicional em embalagens de palha</div>
+    </header>
+
+    <main>
+      <section aria-labelledby="introducao">
+        <h2 id="introducao" style="display:none;">Introdução</h2>
+
+        <p class="intro">
+          A <strong>pamonha</strong> é um alimento tradicional feito com milho verde ralado e temperado,
+          envolvido na própria palha do milho e cozido em água quente. Pode ser preparada na versão
+          doce (com açúcar ou coco) ou salgada (com sal, queijo ou carnes). É muito presente em festas
+          populares e mercados, representando a mistura de técnicas e sabores que marcam a culinária brasileira.
+        </p>
+      </section>
+
+      <section aria-labelledby="ingredientes">
+        <h2 id="ingredientes" style="font-size:24px; margin:8px 0;">Ingredientes principais</h2>
+
+        <ul class="bullets" aria-label="Lista de ingredientes">
+          <li><strong>Milho verde</strong> — a base da massa, ralado ou moído.</li>
+          <li><strong>Palha do milho</strong> — usada para embrulhar e dar aroma no cozimento.</li>
+          <li><strong>Açúcar ou sal</strong> — define se a pamonha será doce ou salgada.</li>
+          <li><strong>Complementos</strong> — queijo, coco ou carne, conforme a tradição local.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="cultural" style="margin-top:12px;">
+        <h2 id="cultural" style="font-size:24px; margin:8px 0;">Significado cultural</h2>
+
+        <p class="intro" style="margin-bottom:6px;">
+          A pamonha exemplifica como ingredientes indígenas (o milho) e técnicas de preparo compartilhadas
+          em comunidades se combinaram com influências africanas e europeias, formando pratos populares
+          que celebram identidade, memória e festa coletiva.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      Cartaz: Culinária — Pamonha
+    </footer>
+  </div>
+</body>
+</html>

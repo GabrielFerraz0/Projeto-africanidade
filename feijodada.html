@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cartaz — Feijoada</title>
+
+  <style>
+    :root{
+      --max-width: 900px;
+    }
+
+    html,body{
+      margin:0;
+      padding:0;
+      background:#fff;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    body{
+      font-family: "Arial", "Helvetica", sans-serif;
+      display:flex;
+      justify-content:center;
+      padding:18mm 12mm;
+    }
+
+    .sheet{
+      width: calc(210mm - 24mm);
+      max-width: var(--max-width);
+      background:#fff;
+      color:#111;
+    }
+
+    header{
+      text-align:center;
+      margin-bottom:10px;
+    }
+
+    h1{
+      font-size:48px;
+      margin:0;
+      line-height:1.05;
+    }
+
+    .subtitle{
+      margin-top:8px;
+      font-size:20px;
+      font-weight:600;
+      opacity:0.9;
+    }
+
+    main{
+      padding:18px 6px 0 6px;
+    }
+
+    .intro{
+      font-size:22px;
+      line-height:1.45;
+      margin-bottom:12px;
+      text-align:justify;
+    }
+
+    h2{
+      font-size:24px;
+      margin:8px 0;
+    }
+
+    .bullets{
+      font-size:20px;
+      line-height:1.45;
+      margin-left:18px;
+    }
+
+    .bullets li{
+      margin-bottom:8px;
+    }
+
+    footer{
+      margin-top:16px;
+      font-size:16px;
+      text-align:right;
+      opacity:0.85;
+    }
+
+    *{
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    @page{
+      size:A4;
+      margin:10mm;
+    }
+
+    @media print{
+      body{ padding:0; }
+      .sheet{ width:auto; box-shadow:none; }
+    }
+
+    @media(max-width:760px){
+      h1{ font-size:36px; }
+      .intro{ font-size:18px; }
+      .bullets{ font-size:16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sheet" role="article">
+    <header>
+      <h1>Feijoada</h1>
+      <div class="subtitle">Um prato de raízes africanas e tradição brasileira</div>
+    </header>
+
+    <main>
+      <section>
+        <p class="intro">
+          A <strong>feijoada</strong> é um dos pratos mais emblemáticos da culinária brasileira. Feita com
+          feijão-preto, carnes salgadas e defumadas, tem origem ligada às tradições africanas e ao
+          aproveitamento de ingredientes nas cozinhas das senzalas, onde técnicas e sabores se
+          misturaram e deram forma ao prato que conhecemos hoje.
+        </p>
+      </section>
+
+      <section>
+        <h2>Ingredientes principais</h2>
+
+        <ul class="bullets">
+          <li><strong>Feijão-preto</strong> — base do prato, rico em sabor e cor.</li>
+          <li><strong>Carnes salgadas e defumadas</strong> — como carne seca, costelinha e linguiça.</li>
+          <li><strong>Alho, cebola e louro</strong> — aromáticos essenciais para o sabor.</li>
+          <li><strong>Acompanhamentos tradicionais</strong> — arroz branco, farofa, couve refogada e laranja.</li>
+        </ul>
+      </section>
+
+      <section style="margin-top:12px;">
+        <h2>Significado cultural</h2>
+
+        <p class="intro">
+          Mais do que um alimento, a feijoada representa história, resistência e identidade.
+          Sua construção reúne técnicas africanas, ingredientes brasileiros e influências portuguesas.
+          Hoje, é símbolo de reunião familiar, celebração e memória cultural.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      Cartaz: Culinária — Feijoada
+    </footer>
+  </div>
+
+</body>
+</html>

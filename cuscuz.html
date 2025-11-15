@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cartaz — Cuscuz</title>
+
+  <style>
+    :root {
+      --max-width: 900px;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: "Arial", "Helvetica", sans-serif;
+      display: flex;
+      justify-content: center;
+      padding: 18mm 12mm;
+    }
+
+    .sheet {
+      width: calc(210mm - 24mm);
+      max-width: var(--max-width);
+      background: #fff;
+      color: #111;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin: 0;
+      line-height: 1.05;
+    }
+
+    .subtitle {
+      margin-top: 8px;
+      font-size: 20px;
+      font-weight: 600;
+      opacity: 0.9;
+    }
+
+    main {
+      padding: 18px 6px 0 6px;
+    }
+
+    .intro {
+      font-size: 22px;
+      line-height: 1.45;
+      margin-bottom: 12px;
+      text-align: justify;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin: 8px 0;
+    }
+
+    .bullets {
+      font-size: 20px;
+      line-height: 1.45;
+      margin-left: 18px;
+    }
+
+    .bullets li {
+      margin-bottom: 8px;
+    }
+
+    footer {
+      margin-top: 16px;
+      font-size: 16px;
+      text-align: right;
+      opacity: 0.85;
+    }
+
+    * {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    @page {
+      size: A4;
+      margin: 10mm;
+    }
+
+    @media print {
+      body { padding: 0; }
+      .sheet { width: auto; }
+    }
+
+    @media (max-width: 760px) {
+      h1 { font-size: 36px; }
+      .intro { font-size: 18px; }
+      .bullets { font-size: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sheet" role="article">
+
+    <header>
+      <h1>Cuscuz</h1>
+      <div class="subtitle">Um alimento versátil com raízes africanas</div>
+    </header>
+
+    <main>
+      <section>
+        <p class="intro">
+          O <strong>cuscuz</strong> é um alimento tradicional feito principalmente a partir de milho flocão
+          hidratado e cozido no vapor. É herdeiro de técnicas africanas de preparo de cereais
+          e adaptações feitas no Brasil, tornando-se um dos pratos mais consumidos em várias regiões —
+          especialmente no Nordeste, onde faz parte do café da manhã e das refeições do dia a dia.
+        </p>
+      </section>
+
+      <section>
+        <h2>Ingredientes principais</h2>
+
+        <ul class="bullets">
+          <li><strong>Flocão de milho</strong> — base do preparo, hidratado antes de cozinhar.</li>
+          <li><strong>Água e sal</strong> — usados para dar liga e sabor.</li>
+          <li><strong>Manteiga ou margarina</strong> — adicionada após o cozimento.</li>
+          <li><strong>Acompanhamentos variados</strong> — como ovos, queijo, carne de sol ou leite.</li>
+        </ul>
+      </section>
+
+      <section style="margin-top: 12px;">
+        <h2>Significado cultural</h2>
+
+        <p class="intro">
+          O cuscuz representa a criatividade culinária africana adaptada aos ingredientes brasileiros.
+          Ele é símbolo de simplicidade, nutrição e tradição familiar. Sua versatilidade permite que seja
+          consumido com alimentos doces ou salgados, reforçando sua presença no cotidiano e na identidade
+          cultural de várias regiões do país.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      Cartaz: Culinária — Cuscuz
+    </footer>
+
+  </div>
+</body>
+</html>

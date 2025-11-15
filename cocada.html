@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cartaz — Cocada</title>
+
+  <style>
+    :root {
+      --max-width: 900px;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: "Arial", "Helvetica", sans-serif;
+      display: flex;
+      justify-content: center;
+      padding: 18mm 12mm;
+    }
+
+    .sheet {
+      width: calc(210mm - 24mm);
+      max-width: var(--max-width);
+      background: #fff;
+      color: #111;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin: 0;
+      line-height: 1.05;
+    }
+
+    .subtitle {
+      margin-top: 8px;
+      font-size: 20px;
+      font-weight: 600;
+      opacity: 0.9;
+    }
+
+    main {
+      padding: 18px 6px 0 6px;
+    }
+
+    .intro {
+      font-size: 22px;
+      line-height: 1.45;
+      margin-bottom: 12px;
+      text-align: justify;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin: 8px 0;
+    }
+
+    .bullets {
+      font-size: 20px;
+      line-height: 1.45;
+      margin-left: 18px;
+    }
+
+    .bullets li {
+      margin-bottom: 8px;
+    }
+
+    footer {
+      margin-top: 16px;
+      font-size: 16px;
+      text-align: right;
+      opacity: 0.85;
+    }
+
+    * {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    @page {
+      size: A4;
+      margin: 10mm;
+    }
+
+    @media print {
+      body { padding: 0; }
+      .sheet { width: auto; }
+    }
+
+    @media (max-width: 760px) {
+      h1 { font-size: 36px; }
+      .intro { font-size: 18px; }
+      .bullets { font-size: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sheet" role="article">
+
+    <header>
+      <h1>Cocada</h1>
+      <div class="subtitle">Doce tradicional com forte influência africana</div>
+    </header>
+
+    <main>
+      <section>
+        <p class="intro">
+          A <strong>cocada</strong> é um doce feito principalmente com coco ralado e açúcar,
+          muito apreciado em diferentes regiões do Brasil. Sua origem está ligada às técnicas
+          de preparo trazidas por povos africanos, que utilizavam o coco em receitas simples,
+          energéticas e fáceis de conservar. Hoje, a cocada é símbolo da doçaria popular brasileira
+          e aparece em feiras, festas e tradições culturais.
+        </p>
+      </section>
+
+      <section>
+        <h2>Ingredientes principais</h2>
+
+        <ul class="bullets">
+          <li><strong>Coco ralado</strong> — base da cocada, responsável pelo sabor e textura.</li>
+          <li><strong>Açúcar</strong> — essencial para formar o doce.</li>
+          <li><strong>Água ou leite</strong> — usados para dar consistência ao cozimento.</li>
+          <li><strong>Variações</strong> — cocada branca, preta (com rapadura), cremosa ou assada.</li>
+        </ul>
+      </section>
+
+      <section style="margin-top: 12px;">
+        <h2>Significado cultural</h2>
+
+        <p class="intro">
+          A cocada representa a doçaria artesanal afro-brasileira, unindo ingredientes
+          amplamente disponíveis — como coco e açúcar — a métodos tradicionais de preparo.
+          É um doce que conecta memória, afetividade e resistência cultural, sendo presença
+          marcante em festas populares e na culinária do dia a dia.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      Cartaz: Culinária — Cocada
+    </footer>
+
+  </div>
+</body>
+</html>
