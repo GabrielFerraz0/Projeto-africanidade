@@ -1,51 +1,156 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Cartaz – Angu à Baiana</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 40px;
-        padding: 0;
-        background: white;
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cartaz — Angu à Baiana</title>
+
+  <style>
+    :root{
+      --max-width: 900px;
     }
 
-    .cartaz {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 30px;
-        border: 3px solid #222;
-        border-radius: 12px;
-        background: #fef9e7;
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
-    h1 {
-        text-align: center;
-        font-size: 42px;
-        margin-bottom: 20px;
-        color: #8a4b14;
+    body{
+      font-family: "Arial", "Helvetica", sans-serif;
+      display:flex;
+      justify-content:center;
+      padding:18mm 12mm;
     }
 
-    p {
-        font-size: 20px;
-        line-height: 1.6;
-        text-align: justify;
+    .sheet {
+      width: calc(210mm - 24mm);
+      max-width: var(--max-width);
+      background: #fff;
+      color: #111;
     }
-</style>
+
+    header{
+      text-align:center;
+      margin-bottom:10px;
+    }
+
+    h1{
+      font-size:48px;
+      margin:0;
+      line-height:1.05;
+    }
+
+    .subtitle{
+      margin-top:8px;
+      font-size:20px;
+      font-weight:600;
+      opacity:0.9;
+    }
+
+    main{
+      padding:18px 6px 0 6px;
+    }
+
+    .intro{
+      font-size:22px;
+      line-height:1.45;
+      margin-bottom:12px;
+      text-align:justify;
+    }
+
+    h2{
+      font-size:24px;
+      margin:8px 0;
+    }
+
+    .bullets{
+      font-size:20px;
+      line-height:1.45;
+      margin-left:18px;
+    }
+
+    .bullets li{
+      margin-bottom:8px;
+    }
+
+    footer{
+      margin-top:16px;
+      font-size:16px;
+      text-align:right;
+      opacity:0.85;
+    }
+
+    * {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    @page {
+      size: A4;
+      margin: 10mm;
+    }
+
+    @media print {
+      body { padding: 0; }
+      .sheet { width: auto; }
+    }
+
+    @media (max-width: 760px) {
+      h1 { font-size: 36px; }
+      .intro { font-size: 18px; }
+      .bullets { font-size: 16px; }
+    }
+  </style>
 </head>
+
 <body>
+  <div class="sheet" role="article">
+    <header>
+      <h1>Angu à Baiana</h1>
+      <div class="subtitle">Prato tradicional com influência afro-brasileira</div>
+    </header>
 
-<div class="cartaz">
-    <h1>Angu à Baiana</h1>
-    <p>
-        O angu à baiana é um prato tradicional da culinária afro-brasileira, feito principalmente com farinha de milho cozida. 
-        Simples e nutritivo, ele tem origem nas influências africanas trazidas durante o período colonial, adaptando-se aos 
-        ingredientes disponíveis no Brasil. Na Bahia, o angu pode ser servido puro, acompanhando carnes, molhos ou preparado 
-        com temperos que realçam seu sabor. É uma comida de forte presença cultural, muito ligada às raízes da alimentação 
-        popular e às tradições culinárias herdadas do povo africano.
-    </p>
-</div>
+    <main>
+      <section aria-labelledby="introducao">
+        <h2 id="introducao" style="display:none">Introdução</h2>
 
+        <p class="intro">
+          O <strong>angu à baiana</strong> é um prato simples e reconfortante feito a partir do
+          <strong>fubá de milho</strong> cozido até obter uma textura cremosa. Muito presente na culinária popular,
+          especialmente na Bahia, o angu pode acompanhar molhos, carnes e vegetais, e reflete a combinação de
+          técnicas indígenas, europeias e influências trazidas por povos africanos.
+        </p>
+      </section>
+
+      <section aria-labelledby="ingredientes">
+        <h2 id="ingredientes">Ingredientes principais</h2>
+
+        <ul class="bullets" aria-label="Ingredientes do angu">
+          <li><strong>Fubá de milho</strong> — base do angu, cozido em água até engrossar.</li>
+          <li><strong>Água e sal</strong> — fundamentais para ajustar a textura e o sabor.</li>
+          <li><strong>Temperos e acompanhamentos</strong> — como carne, quiabo, óleo de dendê ou molhos fortes.</li>
+          <li><strong>Ingredientes regionais</strong> — variações locais adicionam sabores característicos.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="cultural" style="margin-top:12px;">
+        <h2 id="cultural">Significado cultural</h2>
+
+        <p class="intro" style="margin-bottom:6px;">
+          O angu à baiana simboliza a adaptação e resistência das tradições alimentares. É um alimento de fácil
+          preparo e alta capacidade nutritiva, servido em encontros comunitários e refeições do dia a dia. Sua presença
+          nas mesas brasileiras mostra como práticas culinárias se misturaram ao longo do tempo, preservando memórias e
+          laços culturais.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      Cartaz: Culinária — Angu à Baiana
+    </footer>
+  </div>
 </body>
 </html>
